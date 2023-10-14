@@ -21,7 +21,7 @@ def worker_function(xcz, secim, cakisma, uzunluk, result_queue):
     except Exception as e:
         result_queue.put(e)
 
-def sinavListeCalis(cozumluler:list =[], parametre:list =[]):
+def sinavListeCalis(cozumluler:list, parametre:dict):
     #cakisma = cakisma
     #uzunluk = cozumuzunluk
     result_queue = multiprocessing.Queue()
@@ -30,9 +30,9 @@ def sinavListeCalis(cozumluler:list =[], parametre:list =[]):
     processes = []
     
     for i in range(0,coreCount):
-        secim = parametre['secim']
-        uzunluk = parametre['uzunluk']
-        cakisma = parametre['cakisma'][i]
+        secim = parametre['secim'] # type: ignore
+        uzunluk = parametre['uzunluk'] # type: ignore
+        cakisma = parametre['cakisma'][i] # type: ignore
         process = multiprocessing.Process(target=worker_function, args=(cozumluler, secim, cakisma, uzunluk, result_queue))
         process.start()
         processes.append(process)
@@ -68,7 +68,7 @@ def sinavListeCalis(cozumluler:list =[], parametre:list =[]):
         """
     # Rest of your code
 
-def cozumCakismaGoster(cozumOrnek:list()):
+def cozumCakismaGoster(cozumOrnek:list):
 
     cozumcakisma= 0
     dk = []
@@ -121,7 +121,7 @@ if __name__ == "__main__":
         ]
     
     kalanDersListesi(xcozum)
-    parametre = {
+    parametres = {
         'secim':4,
         'uzunluk':6,
         'cakisma':[{'_alt':0,'_ust':21},
@@ -136,4 +136,4 @@ if __name__ == "__main__":
         }
 
 
-    sinavListeCalis(cozumluler=xcozum, parametre=parametre)
+    sinavListeCalis(cozumluler=xcozum, parametre=parametres)

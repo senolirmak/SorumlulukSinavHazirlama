@@ -1,1 +1,6 @@
 flask
+pandas
+numpy
+fpdf2
+pandas_ods_reader
+openpyxl
