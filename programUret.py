@@ -6,8 +6,8 @@ Created on Mon Aug 29 17:00:54 2023
 """
 from src.sinavCozum import SinavProgramiUret
 
-dataDers = "/home/senolirmak/codeProjectPython/sinavHazirlama/data/2023/eylul/islenmis/2023_DersCikti_Eylül.xlsx"
-dersKodu ="/home/senolirmak/codeProjectPython/sinavHazirlama/data/2023/eylul/islenmis/2023_Kod_Eylül.xlsx"
+dataDers = "./data/2023/eylul/islenmis/2023_DersCikti_Eylül.xlsx"
+dersKodu ="./data/2023/eylul/islenmis/2023_Kod_Eylül.xlsx"
 
 program = SinavProgramiUret(dataDers, dersKodu)
 
