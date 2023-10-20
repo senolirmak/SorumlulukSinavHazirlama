@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Aug 30 15:39:07 2023
-
+Sorumlu Dersi Olan Öğrenciler sadece veri olarak indirilir
+OOK12001R012_91.xlsx dosyası
 @author: senolirmak
 """
 from src.veriduzenle_version01 import veriDuzenle
