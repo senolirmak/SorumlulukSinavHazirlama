@@ -7,8 +7,6 @@ Created on Thu May 25 13:03:02 2023
 """
 
 import pandas as pd
-import numpy as np
-
 
 ogrenciler = "/home/senol/Pyprojeler/Sinav/sorumluluk/aktifOgrenciler_03012023.xlsx"
 toplamDev ="/home/senol/Pyprojeler/Sinav/sorumluluk/ToplamDevamsızlık.xlsx"
